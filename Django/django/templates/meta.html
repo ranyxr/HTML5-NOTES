@@ -1,0 +1,17 @@
+{%extends "base.html"%}
+
+{%block title%}The meta data{%endblock%}
+
+{%block content%}
+<h2>Path:{{request_path}}<h2>
+{%for data in meta_data%}
+    <table>
+        <tr>
+            <td>{{data.0}}:</td>
+            <td>{{data.1}}</td>
+        </tr>
+    </table>
+    <br>
+{%endfor%}
+
+{%endblock%}
